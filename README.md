@@ -1,3 +1,3 @@
 # abbyshaferart
 
-TESTING TEST
+Abby's art gallery, portfolio, and storefront website.
