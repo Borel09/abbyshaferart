@@ -20,11 +20,10 @@ body {
 
 
 .navbar {
-    /* background-color:bisque; */
+    background-color:bisque;
     padding: 3px 25px;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
 }
 
 
@@ -61,10 +60,10 @@ body {
 } 
 
 .nav-links a.active {
-    border: 1px solid #5E5D58; /* Adds a border around the active link */
-    padding: 5px 10px;  /* Adds some padding to the link */
-    background-color: #f8f8f8; /* Optional: Adds a background color */
-    border-radius: 5px; /* Optional: Rounds the corners of the border */
+    border: 1px solid #5E5D58; 
+    padding: 5px 10px;  
+    background-color: #f8f8f8; 
+    border-radius: 5px; 
 }
 
 
