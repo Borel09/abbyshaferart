@@ -20,7 +20,7 @@ body {
 
 
 .navbar {
-    background-color:bisque;
+    /* background-color:bisque; */
     padding: 3px 25px;
     display: flex;
     align-items: center;
