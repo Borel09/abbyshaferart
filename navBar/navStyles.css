@@ -30,12 +30,17 @@ body {
 .logoBox {
     display: flex;
     align-items: center;
-    padding-right: 50px;
+    padding-right: 25px;
     margin-left: -10px;
     margin-top: 15px;
 }
 
-
+.artText{
+    font-family: "IBM Plex Sans Thai", serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+}
 .logo {
     width: 200px;
     height: auto;
