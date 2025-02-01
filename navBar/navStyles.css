@@ -21,7 +21,6 @@ body {
 
 .navbar {
     background-color:#f8f8f8;
-    /* padding: 3px 25px; */
     height: 80px;
     padding: 10px;
     width: 100%;
@@ -29,8 +28,7 @@ body {
     align-items: center;
     position: relative;
     transition: height 0.5s ease;
-    /* padding: 0 20px; */
-    z-index: 1000;
+    z-index: 100;
 }
 
 .navbar.shrink{
@@ -91,11 +89,11 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
-
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-.nav-links li {
-    margin-left: 20px;
-} 
+
 
 .nav-links a.active {
     border: 1px solid #5E5D58; 
@@ -104,29 +102,62 @@ body {
     border-radius: 5px; 
 }
 
-/* .nav-links {
-    list-style-type: none;
+.nav-links a:hover {
+    text-decoration: none;
+
+}
+
+nav ul {
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-end;
-} */
+}
+nav li{
+    position: relative;
+}
 
-/* .nav-links li {
-    margin: 0 15px;
-} */
+.dropdown p{
+    cursor: pointer;
+}
 
-/* Optional: Style for headings */
-/* h1, h2, h3, h4, h5, h6 {
-    color: #5E5D58;
+.dropdown-content {
+    display: none; /* Hide the dropdown initially */
+    position: absolute;
+    top: 100%; /* Position it below the Gallery link */
+    left: 0;
+    background-color: #f8f8f8;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content li {
+    padding: 10px;
+}
+  
+.dropdown-content a {
+    color: black;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown on hover */
+    
+}
 
-} */
-
-
-
-
-
-
+.dropdown-content a:hover {
+    color: white;
+    background-color: #5E8291;
+    padding-right: 35px;
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+.dropdown-content .waterColor:hover{
+    padding-right: 42px;
+}
 
 
 /* Optional: Links style */
@@ -135,6 +166,4 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+

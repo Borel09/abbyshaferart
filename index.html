@@ -28,8 +28,15 @@
             <div class="nav-items">
                  <ul class="nav-links">
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="/navBar/about.html">ABOUT</a></li>
-                    <li><a href="/navBar/artwork.html">ARTWORK</a></li>
+
+                    <li class="dropdown">
+                        <p>GALLERY</p>
+                        <ul class="dropdown-content">
+                            <li><a href="" class="waterColor">Water Color</a></li>
+                            <li><a href="">Oil Paintings</a></li>
+                        </ul>
+                    </li>    
+
                     <li><a href="/navBar/contact.html">CONTACT</a></li>
                 </ul>
             </div>
@@ -44,7 +51,6 @@
         </div>
 
         <div class="quoteBox">
-            <!-- <img src="/media/sigLogo/Signature-removebg-preview.png" alt="Abby Shafer" class="logo"> -->
             <h2>PLACE HOLDER</h2>
             <br>
             <p class="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -58,12 +64,29 @@
         </div>
     </div>
      
+    <h1 class="highlightTitle">WORK HIGHLIGHTS</h1>
+    <div class="highlights">
+        <img src="/media/artwork/Garage.jpg" alt="garage" class="garage" onclick="openImage('/media/artwork/Garage.jpg')">
+        <img src="/media/artwork/Self Portrait 2023.JPG" alt="Sp2023" class="selfPort" onclick="openImage('/media/artwork/Self Portrait 2023.JPG')">
+        <img src="/media/artwork/Lilly.jpg" alt="lilly" class="lilly" onclick="openImage('/media/artwork/Lilly.jpg')">
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeImage()">
+        <img id="lightbox-img">   
+    </div>
+    
+    <div class="galleryButtons">
+        <ul class="buttons">
+            <li><a href="">Water Color</a></li>
+            <li><a href="">Oil Paintings</a></li>
+        </ul>
+    </div>
+
+
+
     <div class="tempBox">
         <p>MORE JUNK DOWN HERE</p>
     </div>
-
-    
-
     <script src="navbar.js" defer></script>
     <script src="home.js"></script>
 </body>
