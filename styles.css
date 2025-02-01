@@ -25,9 +25,66 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    gap: 100px;
+    margin-top: 50px;
     
 }
 
+.signature{
+    width: 200px;
+    height: auto;
+    transform: scale(1.25);
+}
+
+.signBox{
+    width: 300px;
+    height: 300px;
+    background-color: #f8f8f8;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 1s ease;
+
+}
+.signBox.visible{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(75px);
+}
+
+.quoteBox{
+    width: 300px;
+    background-color: lightblue;
+    border: 1px solid black;
+    display: block;
+    justify-content:space-evenly;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.quote{
+    font-size: large;
+}
+
+.tempBox{
+    margin-top: 100px;
+    background-color: lightblue;
+    justify-self: center;
+    height: 200px;
+    width: 100%;
+}
 
 
 
