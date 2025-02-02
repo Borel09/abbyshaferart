@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentPath = window.location.pathname;
 
     
-    
+    console.log(currentPath)
 
     if (currentPath === "/index.html") {
         currentPath = currentPath.split("/").pop();
@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         link.classList.add("active");
        }
        
-       if(link.getAttribute("href") === "/navBar/waterColor.html"){
+       if(link.getAttribute("href") === "/navBar/waterColor.html" || 
+            link.getAttribute("href") === "/oil/oilPaintings.html"){
         link.classList.remove("active");
        }
 
