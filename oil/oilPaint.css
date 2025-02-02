@@ -44,23 +44,22 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 5px; /* Spacing between images */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
 }
 
 .gallery img {
-    width: 100%; /* Makes images fill their grid cells */
-    height: auto; /* Keeps aspect ratio */
-    object-fit: cover; /* Ensures uniform display */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
     transform: scale(0.8);
     cursor: pointer;
 }
 
 .gallery img:hover {
-    transform: scale(0.9); /* Slight zoom effect on hover */
+    transform: scale(0.9); 
 }
