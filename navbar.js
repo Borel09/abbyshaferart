@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         link.classList.add("active");
        }
        
-       if(link.getAttribute("href") === "/navBar/waterColor.html" || 
-            link.getAttribute("href") === "/oil/oilPaintings.html"){
+       if(link.getAttribute("href") === "/architecture/architectureSeries.html" || 
+            link.getAttribute("href") === "/otherWorks/otherWorks.html"){
         link.classList.remove("active");
        }
 

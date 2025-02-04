@@ -83,7 +83,34 @@ body {
     font-weight: 500;
 }
 
-.highlights{
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Responsive columns */
+    gap: 30px; /* Space between images */
+    width: 100%;
+    max-width: 1200px; /* Adjust to control gallery width */
+    margin: 0 auto; /* Centers the gallery */
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%; /* Ensures images scale inside their grid cells */
+    height: auto;
+    aspect-ratio: 1 / 1; /* Keeps images square */
+    object-fit: cover; /* Ensures images don’t stretch */
+    border: 5px solid white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* .highlights{
     display: flex;
     justify-content: center;
     height: 400px;
@@ -114,7 +141,7 @@ body {
 
     cursor: pointer;
     transition: transform 2s ease;
-}
+} */
 
 
 .lightbox{
