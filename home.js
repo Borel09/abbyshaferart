@@ -3,38 +3,58 @@ const gallery = document.querySelector('.gallery');
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const images = [
-    "/media/artwork/Ocean.jpg",
-    "/media/artwork/Self Portrait 2023.JPG",
-    "/media/artwork/All My Thoughts They Come in Pairs.png"  
+    "/media/artwork/archiecture/Sadé.jpg",
+    "/media/artwork/otherWorks/All My Thoughts They Come in Pairs.png",
+    "/media/artwork/otherWorks/Self Portrait 2023.JPG"  
+];
+const smallDescript = [
+    "Sadé, 2023",
+    "All My Thoughts They Come in Pairs, 2022-2025",
+    "Self-Portrait, 2023"
 ];
 
 
-images.forEach(function(src){
+
+function generatePic(src, index){
+    const container = document.createElement('div');
+    const divDesrcipt = document.createElement('div');
+    container.classList.add('image-container');
+
     const img = document.createElement('img');
     img.src = src;
+    img.classList.add("favorites");
     img.alt = 'Artwork';
     img.onclick = function(){
         openImage(src);
     };
     
-    gallery.appendChild(img);
-    
-    
-})
-gallery.style.marginBottom = '100px';
+    divDesrcipt.classList.add("overlay");
+    divDesrcipt.textContent = smallDescript[index] || "No descriptions available";
+
+    container.appendChild(img);
+    container.appendChild(divDesrcipt);
+    gallery.appendChild(container);   
+}
+images.forEach(generatePic);
+// gallery.style.marginBottom = '100px';
+
+
+
+
+
+
+
+
+
 
 function openImage(src){
+    console.log(src)
     lightboxImg.src = src;
     lightbox.style.display = "flex";
 }
 function closeImage(){
     document.getElementById("lightbox").style.display = "none";
 }
-
-
-
-
-
 
 
 window.addEventListener("scroll", function(){

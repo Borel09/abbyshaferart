@@ -86,62 +86,28 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Responsive columns */
-    gap: 30px; /* Space between images */
-    width: 100%;
-    max-width: 1200px; /* Adjust to control gallery width */
-    margin: 0 auto; /* Centers the gallery */
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 .gallery img {
-    width: 100%; /* Ensures images scale inside their grid cells */
-    height: auto;
-    aspect-ratio: 1 / 1; /* Keeps images square */
-    object-fit: cover; /* Ensures images don’t stretch */
-    border: 5px solid white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+    transform: scale(0.8);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    /* margin-bottom: 50px; */
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(0.9); 
 }
 
-
-/* .highlights{
-    display: flex;
-    justify-content: center;
-    height: 400px;
-    width: 100%;
-    margin-bottom: 25px;
-}
-.highlights .garage{
-    transform: scale(0.85);
-    border: 5px solid white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
-    cursor: pointer;
-    transition: transform 2s ease;
-}
-.highlights .selfPort{
-    transform: scale(0.85);
-    border: 5px solid white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
-    cursor: pointer;
-    transition: transform 2s ease;
-}
-
-.highlights .lilly{
-    transform: scale(0.85);
-    border: 5px solid white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
-    cursor: pointer;
-    transition: transform 2s ease;
-} */
 
 
 .lightbox{
@@ -162,6 +128,56 @@ body {
     max-height: 90%;
     border-radius: 10px;
 }
+
+
+.image-container{
+    position: relative;
+    display: inline-block;
+    /* background-color: green; */
+    width: 100%;
+    height: auto;
+}
+
+.image-container img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 50px;
+    left: 10%;
+    right: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.image-container:hover .overlay{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .buttons{
     height: 40px;
@@ -189,6 +205,16 @@ body {
     color: #5E8291;
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
