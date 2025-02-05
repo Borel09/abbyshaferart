@@ -156,6 +156,7 @@ body {
     transition: opacity 0.2s ease;
     width: 80%;
     border-radius: 5px;
+    transform: translateY(-45%);
 }
 
 .image-container:hover .overlay{

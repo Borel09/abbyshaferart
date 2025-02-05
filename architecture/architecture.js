@@ -1,6 +1,5 @@
 //DOM
-const lightboxImg = document.createElement('img');
-const lightbox = document.createElement('div');
+
 const gallery = document.createElement('div');
 const galleryTitle = document.createElement('div');
 const archBanner = document.querySelector(".archBanner");
@@ -22,6 +21,15 @@ const smallDescript = [
     "Untitled, 2023",
     "Untitled, 2023",
     "SB, 2023"
+];
+const longDes = [
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven"
 ];
 
 
@@ -60,6 +68,12 @@ images.forEach(generatePic);
 
 
 //image overlay 
+const lightbox = document.createElement('div');
+// const container = document.createElement('div')
+// container.classList.add('lightbox-container');
+const lightboxImg = document.createElement('img');
+const longDescript = document.createElement('div');
+longDescript.classList.add('long-description')
 lightbox.classList.add("lightbox");
 lightbox.id = "lightbox";
 lightbox.setAttribute("onclick", "closeImage()");
@@ -68,17 +82,39 @@ gallery.insertAdjacentElement("afterend", lightbox);
 
 lightboxImg.id = "lightbox-img";
 lightbox.appendChild(lightboxImg);
+lightbox.appendChild(longDescript);
 document.body.appendChild(lightbox);
 
+
+
+let currentImageIndex = null;
 
 function openImage(src){
     console.log(src)
     lightboxImg.src = src;
+    addIndexClass(src, images);
     lightbox.style.display = "flex";
 }
 function closeImage(){
+    if(currentImageIndex !== null){
+        lightboxImg.classList.remove(currentImageIndex.toString());
+        currentImageIndex = null;
+    }
     document.getElementById("lightbox").style.display = "none";
 }
+
+function addIndexClass(path, array){
+    let index = array.indexOf(path);
+    if(index !== -1){
+        if(currentImageIndex !== null){
+            lightboxImg.classList.remove(currentImageIndex.toString());
+        }
+        lightboxImg.classList.add(index.toString());
+        currentImageIndex = index;
+        console.log(index)
+    }
+}
+
 
 
 
