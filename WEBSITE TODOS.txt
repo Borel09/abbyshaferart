@@ -1,0 +1,16 @@
+WEBSITE TODO'S:
+
+fix nav bar gallery dropdown -> the page you are on should stay highlighted
+
+create loop in arch.js to push long description to the lightbox
+
+extend the popup description code to homepage and other works page.
+
+implement contacts page
+
+implement gallery button at the bottom of each gallery for easy navigation to the other gallery
+
+implement pricing page
+
+launch???
+
