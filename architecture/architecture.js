@@ -23,13 +23,13 @@ const smallDescript = [
     "SB, 2023"
 ];
 const longDes = [
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven"
+    "one"
+    // "two",
+    // "three",
+    // "four",
+    // "five",
+    // "six",
+    // "seven"
 ];
 
 
@@ -69,8 +69,8 @@ images.forEach(generatePic);
 
 //image overlay 
 const lightbox = document.createElement('div');
-// const container = document.createElement('div')
-// container.classList.add('lightbox-container');
+const container = document.createElement('div')
+container.classList.add('lightbox-container');
 const lightboxImg = document.createElement('img');
 const longDescript = document.createElement('div');
 longDescript.classList.add('long-description')
@@ -81,8 +81,9 @@ gallery.insertAdjacentElement("afterend", lightbox);
 
 
 lightboxImg.id = "lightbox-img";
-lightbox.appendChild(lightboxImg);
-lightbox.appendChild(longDescript);
+container.appendChild(lightboxImg);
+container.appendChild(longDescript);
+lightbox.appendChild(container);
 document.body.appendChild(lightbox);
 
 
@@ -94,6 +95,7 @@ function openImage(src){
     lightboxImg.src = src;
     addIndexClass(src, images);
     lightbox.style.display = "flex";
+    longDescript.textContent = "TEST TEST TEST"
 }
 function closeImage(){
     if(currentImageIndex !== null){

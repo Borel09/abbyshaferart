@@ -24,12 +24,12 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    aspect-ratio: 16/9;
-    font-family: "Questrial", sans-serif;
-    font-weight: 200; 
+    aspect-ratio: 16/9;  
 }
 
 .galleryTitle{
+    font-family: "Questrial", sans-serif;
+    font-weight: 200; 
     height: 40px;
     width: 100%;
     font-size: 25px;
@@ -79,15 +79,18 @@ body {
     z-index: 200;
 }
 
-.lightbox-container{
+.lightbox-container {
     position: relative;
     max-width: 90%;
     max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .lightbox img{
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 80vh;
     border-radius: 10px;
     display: block;
 }
@@ -117,21 +120,19 @@ body {
 }
 
 
-/* THIS IS WHERE YOU LEFT OFF */
 
-/* .long-description{
-    position: fixed;
-    bottom: 10%;
-    right: 0;
-    height: 10%;
-    width: 50%;
-    justify-content: center;
-    align-self: left;
+.long-description{
+    font-family: "Questrial", sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(35%);
+    width: 100.1%;
+    height: 15%;
     background-color: rgba(0, 0, 0, 0.7);
-    
-    /* background-color: pink; 
     color: white;
     padding: 10px;
-    z-index: 100;
-    transform: translateX(9.7%)  translateY(-25%);
-} */
+    border-radius: 0 0 10px 10px;
+    text-align: left;
+}
+
