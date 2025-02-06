@@ -1,5 +1,4 @@
 //DOM
-
 const gallery = document.createElement('div');
 const galleryTitle = document.createElement('div');
 const archBanner = document.querySelector(".archBanner");
@@ -23,13 +22,13 @@ const smallDescript = [
     "SB, 2023"
 ];
 const longDes = [
-    "one"
-    // "two",
-    // "three",
-    // "four",
-    // "five",
-    // "six",
-    // "seven"
+    "Ferguson, 2024, watercolor and ink on paper, 9x12 inches",
+    "Untitled, 2022, watercolor and ink on paper, 9x12 inches",
+    "Untitled, 2025, watercolor, gouache, colored pencil, and ink on paper, 8x10",
+    "Sadé, 2023, watercolor and ink on paper, 9x12 inches",
+    "Untitled, 2023, watercolor and ink on paper, 9x12 inches",
+    "Untitled, 2023, watercolor and ink on paper, 9x12 inches",
+    "SB, 2023, watercolor, gouache, colored pencil and ink on paper, 9x12 inches"
 ];
 
 
@@ -42,6 +41,29 @@ archBanner.insertAdjacentElement("afterend", galleryTitle);
 //the gallery itself
 gallery.classList.add("gallery");
 galleryTitle.insertAdjacentElement("afterend", gallery);
+
+
+//image overlay 
+const lightbox = document.createElement('div');
+const container = document.createElement('div')
+const lightboxImg = document.createElement('img');
+const longDescript = document.createElement('div');
+
+lightbox.classList.add("lightbox");
+lightbox.id = "lightbox";
+lightbox.setAttribute("onclick", "closeImage()");
+container.classList.add('lightbox-container');
+longDescript.classList.add('long-description');
+
+container.appendChild(lightboxImg);
+container.appendChild(longDescript);
+lightbox.appendChild(container);
+gallery.insertAdjacentElement("afterend", lightbox);
+
+
+
+let currentImageIndex = null;
+
 
 function generatePic(src, index){
     const container = document.createElement('div');
@@ -65,37 +87,29 @@ function generatePic(src, index){
 images.forEach(generatePic);
 
 
-
-
-//image overlay 
-const lightbox = document.createElement('div');
-const container = document.createElement('div')
-container.classList.add('lightbox-container');
-const lightboxImg = document.createElement('img');
-const longDescript = document.createElement('div');
-longDescript.classList.add('long-description')
-lightbox.classList.add("lightbox");
-lightbox.id = "lightbox";
-lightbox.setAttribute("onclick", "closeImage()");
-gallery.insertAdjacentElement("afterend", lightbox);
-
-
-lightboxImg.id = "lightbox-img";
-container.appendChild(lightboxImg);
-container.appendChild(longDescript);
-lightbox.appendChild(container);
-document.body.appendChild(lightbox);
-
-
-
-let currentImageIndex = null;
-
 function openImage(src){
     console.log(src)
     lightboxImg.src = src;
-    addIndexClass(src, images);
     lightbox.style.display = "flex";
-    longDescript.textContent = "TEST TEST TEST"
+
+    //find the index
+    let index = images.indexOf(src);
+    if(index !== -1){
+        longDescript.textContent = longDes[index];
+    }
+
+    // THIS DOES THE SAMETHING AS THE LINES ABOVE (INDEXOF)
+    // for(let i = 0; i < longDes.length; i++){
+    //     console.log(longDes[i]);
+    //     for(let j = 0; j < images.length; j++){
+    //         if(i === j && images[i] === src){
+    //             longDescript.textContent = longDes[j];
+    //             // console.log("working");
+    //             return    
+    //         }
+    //     }    
+    // }
+
 }
 function closeImage(){
     if(currentImageIndex !== null){
@@ -105,17 +119,7 @@ function closeImage(){
     document.getElementById("lightbox").style.display = "none";
 }
 
-function addIndexClass(path, array){
-    let index = array.indexOf(path);
-    if(index !== -1){
-        if(currentImageIndex !== null){
-            lightboxImg.classList.remove(currentImageIndex.toString());
-        }
-        lightboxImg.classList.add(index.toString());
-        currentImageIndex = index;
-        console.log(index)
-    }
-}
+
 
 
 

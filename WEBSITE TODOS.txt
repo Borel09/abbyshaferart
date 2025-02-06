@@ -1,15 +1,16 @@
 WEBSITE TODO'S:
 
-1: create loop in arch.js to push long description to the lightbox
+1: implement contacts page -- 
+                {BANNER}
+    {*create form for user input to send an email to abby*}
+    {-firstname/lastname}
+    {-email}
+    {-msg}
 
-2: extend the popup description code to homepage and other works page.
-    -> started work on this not yet finished.
-    
-3: implement contacts page
+2: replace lorem ipsum on homepage
 
-4: implement gallery button at the bottom of each gallery for easy navigation to the other gallery
+3: popup description font choice
 
-5: implement pricing page
-
-6: launch???
-
+-----FUTURE GOALS------
+implement a pricing page
+implement a store page for selling prints
