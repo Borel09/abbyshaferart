@@ -111,8 +111,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    
 }
-
+.nav-links a{
+    color: #5E5D58;
+    text-decoration: none;
+}
 
 .nav-links a.active {
     border: 1px solid #5E5D58; 
@@ -120,6 +124,8 @@ body {
     background-color: #f8f8f8; 
     border-radius: 5px; 
 }
+
+
 
 .nav-links a:hover {
     text-decoration: none;
@@ -159,6 +165,16 @@ nav li{
 .dropdown-content a {
     color: black;
 }
+
+.dropdown-content a.active-dropdown{
+    color: white !important; /* Ensure it overrides other rules */
+    background-color: #5E8291;
+    padding-right: 35px;
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2px;
+}
   
 .dropdown:hover .dropdown-content {
     display: block; /* Show the dropdown on hover */
@@ -178,11 +194,12 @@ nav li{
     padding-right: 0px;
 }
 
-
-/* Optional: Links style */
-a {
-    color: #5E5D58;
-    text-decoration: none;
+.active-dropdown{
+    color: white;
+    background-color: #5E8291;
+    padding-right: 35px;
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2px;
 }
-
-
