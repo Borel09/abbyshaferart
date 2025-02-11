@@ -63,8 +63,9 @@ body {
 
 .quoteBox{
     width: 300px;
-    background-color: lightblue;
-    border: 1px solid black;
+    background-color: #f8f8f8;
+    color: #5E8291;
+    /* border: 1px solid black; */
     display: block;
     justify-content:space-evenly;
     white-space: normal;
@@ -74,6 +75,7 @@ body {
 
 .quote{
     font-size: large;
+    color: black;
 }
 
 .highlightTitle{
