@@ -144,6 +144,12 @@ nav li{
 .dropdown p{
     cursor: pointer;
 }
+.dropdown p.active{
+    border: 1px solid #5E8291; 
+    padding: 5px 10px;
+    background-color: #f8f8f8; 
+    border-radius: 5px;
+}
 
 .dropdown-content {
     display: none; /* Hide the dropdown initially */
@@ -251,18 +257,8 @@ nav li{
         display: none;
     }  
     
-    /* .dropdown-content {
-        display: none;
-        opacity: 0;
-        max-height: 0;
-        transition: all 0.3s ease;
+    .navbar.shrink .artText{
+    transform: translateX(-100px);
+    margin-left: 0;
     }
-    .dropdown-content.show {
-        display: block;
-        opacity: 1;
-        max-height: 500px; 
-    } */
-    
-    
-
 }

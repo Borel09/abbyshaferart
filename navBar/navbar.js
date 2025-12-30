@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-links a"); // Select all navigation links
     const menuToggle = document.getElementById("menuToggle");
     const mobileLinks = document.getElementById("navLinks");
+    const galPTag = document.getElementById("galleryID"); 
     
     
     let currentPath = window.location.pathname;
@@ -10,36 +11,44 @@ document.addEventListener("DOMContentLoaded", function () {
     let galleryParent = document.querySelector('.nav-links .dropdown > p');
     let isGalleryPage = false;
 
-    if(!menuToggle && !mobileLinks){
-        navLinks.forEach(link => {
-            let linkPath = new URL(link.href).pathname;
-            console.log(linkPath)
-
-            if(linkPath === currentPath){
-                link.classList.add("active");
-            }
-
-            if(linkPath.startsWith("/architecture/") && linkPath === currentPath){
-                link.classList.add("active-dropdown");
-            } else if(linkPath.startsWith("/otherWorks/") && linkPath === currentPath){
-                link.classList.add("active-dropdown");
-            }
-
-        });
-    }
-
-    // if current page belongs to the gallery dropdown, highlight the main "gallery" link
-    if(isGalleryPage && galleryParent){
-        galleryParent.classList.add("active");
-    }
-    
-
     // Mobile menu toggle
     if(menuToggle && mobileLinks){
         menuToggle.addEventListener("click", function(){
             mobileLinks.classList.toggle("show");
+            console.log("firing")
         });
+        //mobile active loop
+        
     }
+
+    //desktop active loop
+    navLinks.forEach(link => {
+        let linkPath = new URL(link.href).pathname;
+        //console.log(linkPath)
+
+        if(linkPath === currentPath){
+            link.classList.add("active");
+        }
+
+        if(linkPath.startsWith("/architecture/") && linkPath === currentPath){
+            link.classList.add("active-dropdown");
+            isGalleryPage = true;
+        } else if(linkPath.startsWith("/otherWorks/") && linkPath === currentPath){
+            link.classList.add("active-dropdown");
+            isGalleryPage = true;
+        }
+
+    });
+    
+
+    // if current page belongs to the gallery dropdown, highlight the main "gallery" link
+    if(isGalleryPage && galleryParent){
+        galleryParent.classList.add("active");
+        
+    }
+    
+
+    
 });
 
 
@@ -55,6 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "/architecture/architectureSeries.html";
         });
     }
+
+    // insert a link to other works page at the bottom of the pictures on the architecture page
+
+
 });
 
 var navbar = document.getElementById("navBar");

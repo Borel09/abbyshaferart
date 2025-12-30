@@ -145,3 +145,22 @@ body {
 }
 
 
+.otherWorksLink{
+    font-family: "Questrial", sans-serif;
+    font-weight: 200; 
+    height: 40px;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    text-decoration: none;
+    background-color: #63708B;
+    margin-left: 30%;
+    border-radius: 5px;
+}
+
+
