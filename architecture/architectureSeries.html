@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/navBar/navStyles.css">
     <link rel="stylesheet" href="/footer/footer.css">
-    <link rel="stylesheet" href="/architecture/architecture.css">
+    <link rel="stylesheet" href="architecture.css">
     <title>Abby Shafer Art</title>
 </head>
 <body>
@@ -25,19 +25,20 @@
                     <p class="artText">ART</p>    
                 </div>
             <div class="nav-items">
-                 <ul class="nav-links">
+                 <ul class="nav-links" id="navLinks">
                     <li><a href="/index.html">HOME</a></li>
 
                     <li class="dropdown">
                         <p>GALLERY</p>
                         <ul class="dropdown-content">
-                            <li><a href="/architecture/architectureSeries.html" class="architecture">Architecture</a></li>
+                            <li><a href="architectureSeries.html" class="architecture">Architecture</a></li>
                             <li><a href="/otherWorks/otherWorks.html">Other Works</a></li>
                         </ul>
                     </li>    
 
                     <li><a href="/contact/contact.html">CONTACT</a></li>
                 </ul>
+                <button class="menu-toggle" id="menuToggle">☰</button>
             </div>
         </nav>
     </header>
@@ -60,6 +61,6 @@
         <p class="credit" id="creditEmail">Created by <a href="https://github.com/Borel09">Ryan Borel</a></p>
     </div>
     <script src="/navBar/navbar.js" defer></script>
-    <script src="/architecture/architecture.js"></script>
+    <script src="architecture.js"></script>
 </body>
 </html>

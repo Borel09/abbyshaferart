@@ -48,7 +48,7 @@ body {
     align-items: center;
     padding-right: 25px;
     margin-left: 80px;
-    margin-top: 1px;
+    margin-top: 10px;
 }
 
 .navbar .artText{
@@ -111,7 +111,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    
 }
 .nav-links a{
     color: #5E5D58;
@@ -202,4 +201,68 @@ nav li{
     font-size: 16px;
     font-weight: bold;
     border-radius: 2px;
+}
+
+/* Hide the toggle button by default */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Media query for small screens (max width 768px) */
+@media (max-width: 768px) {
+    .nav-links {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        background-color: #f8f8f8;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        z-index: 99;
+    }
+
+    .nav-links.show {
+        max-height: 500px; /* large enough to show all items */
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-right: 30px;
+    }
+
+    .logoBox{
+        margin-left: 10px;
+    }
+
+    /* Make the gallery element a link, not a dropdown on mobile */
+    /*remove the hover effect for dropdown on mobile */
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }  
+    
+    /* .dropdown-content {
+        display: none;
+        opacity: 0;
+        max-height: 0;
+        transition: all 0.3s ease;
+    }
+    .dropdown-content.show {
+        display: block;
+        opacity: 1;
+        max-height: 500px; 
+    } */
+    
+    
+
 }
