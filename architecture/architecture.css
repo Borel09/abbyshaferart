@@ -145,13 +145,46 @@ body {
 }
 
 
+
 .otherWorksLink{
     font-family: "Questrial", sans-serif;
-    font-weight: 200; 
+    font-weight: 300; 
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    text-decoration: none;
+    background-color: #63708B;
+    margin-left: 45%;
+    border-radius: 5px;
+}
+
+.otherWorksLink:hover{
+    color: #63708B;
+    background-color: white;
+    border: #63708B 2px solid;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        padding: 10px;
+    }
+
+
+    .otherWorksLink{
+    font-family: "Questrial", sans-serif;
+    font-weight: 300; 
     height: 40px;
     width: 40%;
     font-size: 20px;
-    font-weight: 600;
     color: white;
     display: flex;
     justify-content: center;
@@ -163,4 +196,5 @@ body {
     border-radius: 5px;
 }
 
+}
 

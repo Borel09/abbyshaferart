@@ -79,5 +79,7 @@ function closeImage(){
     document.getElementById("lightbox").style.display = "none";
 }
 
-
-
+function isMobileScreen() {
+    let isMobile = window.innerWidth <= 768;
+    return isMobile;
+}

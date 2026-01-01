@@ -148,4 +148,39 @@ body {
     opacity: 1;
 }
 
+.architectureLink{
+    font-family: "Questrial", sans-serif;
+    font-weight: 300;
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    color: white;
+    background-color: #C98965;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 45%;
+}
 
+.architectureLink:hover{
+    background-color: white;
+    color: #C98965;
+    border: 2px solid #C98965;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .architectureLink{
+        margin-left: 25%;
+        
+    }
+    
+}

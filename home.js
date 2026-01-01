@@ -72,13 +72,27 @@ function closeImage(){
 }
 
 
+//detect if screen is mobile sized or not
+function isMobileScreen(){
+    //console.log(window.innerWidth);
+    let isMobile = window.innerWidth <= 768;
+    //console.log(isMobile);
+    return isMobile;
+}
 
 
-window.addEventListener("scroll", function(){
-    console.log("test test test");
-    if(window.scrollY > 0){
-        sigBox.classList.add("visible");
-    } else {
-        sigBox.classList.remove("visible");
-    }
-});
+
+if(!isMobileScreen()){
+    window.addEventListener("scroll", function(){
+        console.log("test test test");
+        if(window.scrollY > 0){
+            sigBox.classList.add("visible");
+        } else {
+            sigBox.classList.remove("visible");
+        }
+    });
+} else {
+    let removeSign = document.getElementById("sigBox");
+    //delete the child of contaainer to remove the signature box on mobile
+    removeSign.parentNode.removeChild(removeSign);
+}
